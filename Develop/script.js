@@ -2,24 +2,28 @@
 var letters = "abcdefghijklmnopqrstuvwxyz"
 var numbers = "1234567890"
 var symbols = " !#$%&'()* -./:;<=>?@[]^_`{|}~"
-var generateBtn = document.querySelector("#generate");
-var numbersSelect = confirm("Do you want numbers in your password?")
-var symbolsSelect = confirm("Do you want symbols in your password?")
-var lowerSelect = confirm("Do you want lower case letters in your password?")
-var upperSelect = confirm("Do you want upper case letters in your password?")
-var length = prompt("How long do you want your passworld?")
-// test if this code works
 var userAnser = "" ;
 var passwordPieces = [];
+var generateBtn = document.querySelector("#generate");
+var symbolsSelect = false
+var numbersSelect = false
+var upperSelect = false
+var lowerSelect = false
+var length = 0
 function generatePassword () {
-    
+    var numbersSelect = confirm("Do you want numbers in your password?")
+    var symbolsSelect = confirm("Do you want symbols in your password?")
+    var lowerSelect = confirm("Do you want lower case letters in your password?")
+    var upperSelect = confirm("Do you want upper case letters in your password?")
+    var length = prompt("How long do you want your passworld?")
+
     }if (numbersSelect === true) {
         var userAnser = (userAnser + numbers)
     }
-    if (true && symbolsSelect); {
+    if (symbolsSelect=== true) {
         var userAnser = (userAnser + symbols)
     }
-    if (lowerSelect === true); {
+    if (lowerSelect === true) {
         var userAnser = (userAnser + letters)
     }
     if (upperSelect === true) {
@@ -33,7 +37,7 @@ function generatePassword () {
 // Write password to the #password input
 function writePassword() {
     generatePassword()
-    var password = passwordPieces.toString();;
+    var passwordText = passwordPieces.toString();;
     var passwordText = document.querySelector("#password");
 
     passwordText.value = password;
